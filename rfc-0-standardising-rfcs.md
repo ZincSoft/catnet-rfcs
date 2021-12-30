@@ -34,7 +34,7 @@ Provide an explanation on simular Protocols/RFCs, and why this one is diferent (
 +------+ +------+ +------+      +-----+
       |   |          |             |
      +-----+      +-----+       +-----+
-     | ATP |      | EDP |  ...  | ... |
+     | ATP |      | ADP |  ...  | ... |
      +-----+      +-----+       +-----+
         |            |             |
       +------------------------------+

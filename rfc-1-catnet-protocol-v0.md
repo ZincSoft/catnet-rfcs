@@ -72,7 +72,7 @@ The following diagram illustrates the place of the Catnet protocol in the protoc
 +--------+ +------+ +------+
         |   |          |
        +-----+      +-----+
-       | ATP |      | EDP |
+       | ATP |      | ADP |
        +-----+      +-----+
           |            |
  +-------------------------------+
