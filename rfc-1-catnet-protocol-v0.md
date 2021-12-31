@@ -68,7 +68,7 @@ The following diagram illustrates the place of the Catnet protocol in the protoc
 
 ~~~
 +--------+ +------+ +------+ 
-| BeeNet | | RFTP | | UFTP |
+| Saynet | | RFTP | | UFTP |
 +--------+ +------+ +------+
         |   |          |
        +-----+      +-----+
