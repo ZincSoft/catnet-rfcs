@@ -63,3 +63,13 @@ Each UTP complimentary header is defined in its own RFC. Below is a list.
 | Name | RFC |
 | :--- | --: |
 | ATP  | 5   |
+
+# Reference
+
+1. Catnet RFC 5
+2. Catnet RFC 9
+3. Catnet RFC 1
+4. Internet RFC 768
+
+# Authors
+Milo Banks

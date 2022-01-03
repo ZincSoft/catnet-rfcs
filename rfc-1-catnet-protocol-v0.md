@@ -375,9 +375,9 @@ A token that must be unique from any other stream token used recently.
 "Recently" means within the maximum likely lifetime of a packet including transit time from source to destination and time spent awaiting reassembly with other fragments of the same packet. However, it is not required that a source node know the maximum packet lifetime.  Rather, it is assumed that the requirement can be met by maintaining the Identification value as a simple, 32-bit, "wrap-around" counter, incremented each time a packet must be fragmented.  It is an implementation choice whether to maintain a single counter for the node or multiple counters, e.g., one for each of the node's possible source addresses, or one for each active (source address, destination address)combination.
 
 # References
-[Internet RFC 791](https://datatracker.ietf.org/doc/html/rfc791)
+1. Internet RFC 791
 
-[Internet RFC 2460](https://datatracker.ietf.org/doc/html/rfc2460)
+2. Internet RFC 2460
 
 ##### **Some text was copied verbatim!**
 The only text that was copied were explanations of common networking terms and practices.
