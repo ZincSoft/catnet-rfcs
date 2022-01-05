@@ -1,7 +1,5 @@
 UTP Version 0 (UTPv0)
 
-UTPv0
-
 # Introduction
 The Uncontrolled user-datagram Transmission Protocol (UTP) is defined to transport datagrams over a network. The underlying protocol is assumed to be the CP protocol (residing on layer 3).
 
@@ -27,7 +25,7 @@ The following is a simple diagram showing the makeup of the UTP protocol.
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-| Type Identifier |           Checksum            |H|  Padding  |
+|                      See HHS                      |  Padding  |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |          Source Port          |       Destination Port        |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -35,14 +33,14 @@ The following is a simple diagram showing the makeup of the UTP protocol.
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ~~~
 
-### Type Identifier
-See RFC 1 header requirements.
+| Field | Bits | Description | RFC |
+| :---- | :--: | :---------: | --: |
+| Source Port | 16 | The originating port, except for in alias routing. | N/A |
+| Destination Port | 16 | The destination port. | N/A|
+| Datagram Length | 20 | The length of the datagram. | N/A |
 
-### Checksum
-See RFC 1 header requirements.
-
-### More Headers (H)
-Specify if there are more headers after this one. See HHS.
+### See HHS
+See RFC 9.
 
 ### Source Port
 The port that this packet was sent from.
