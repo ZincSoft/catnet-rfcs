@@ -40,7 +40,7 @@ The following is a simple diagram showing the fragment that every HHS compatible
 ~~~
 
 #### Type Identifier
-This 9-bit number is unique for every HHS compliant protocol.
+This 9-bit number is unique for every HHS compliant protocol. It is the RFC number of the protocol that uses it.
 
 #### Checksum
 This checksum is created with this header and all the data below it. In this case, data may refer to another header (complimentary) or just a datagram.

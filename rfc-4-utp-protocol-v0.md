@@ -35,12 +35,10 @@ The following is a simple diagram showing the makeup of the UTP protocol.
 
 | Field | Bits | Description | RFC |
 | :---- | :--: | :---------: | --: |
+| See HHS | 26 | Valid under RFC 1. | 9 |
 | Source Port | 16 | The originating port, except for in alias routing. | N/A |
 | Destination Port | 16 | The destination port. | N/A|
 | Datagram Length | 20 | The length of the datagram. | N/A |
-
-### See HHS
-See RFC 9.
 
 ### Source Port
 The port that this packet was sent from.
@@ -55,12 +53,6 @@ The length of everything else, including the complimentary headers.
 
 ## Extensibility
 As mentioned earlier/above, UTP is the only transport protocol (capable of supporting an application protocol) that sits directly on CP. This would be a problem since UTP provides no data reliability if it was not for the intended extensibility of UTP. Remember that UTP follows the header hierarchy system (HHS, 9).
-
-Each UTP complimentary header is defined in its own RFC. Below is a list.
-
-| Name | RFC |
-| :--- | --: |
-| ATP  | 5   |
 
 # Reference
 

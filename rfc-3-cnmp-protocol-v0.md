@@ -62,12 +62,6 @@ Different RFCs should be written for every code carried inside a CNMP header. Fo
 
 In short, protocols use CNMP to send back elementary information that is simple enough it does not need its own protocol. It is also used to report errors about the network and failures concerning other protocols.
 
-Below is a list of all the RFCs that use CNMP.
-
-| Name | RFC |
-| :--- | --: |
-| APRR | 6   |
-
 ## Reliability
 
 CNMP provides no promise of reliability. A checksum is provided but is not required to act upon. There is no mechanism for requesting the resending of a CNMP packet, as CNMP is only for sending errors and information (which are not strictly required). As such, these may go undelivered. Any Catnet module that implements CNMP (which all are required to) should have a timeout mechanism (implementation specifics are left up to the implementation).
@@ -85,20 +79,21 @@ The following is a simple diagram showing the makeup of the CNMP protocol.
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |                      See HHS                      |   Type    |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|   Code    |             Port              |       Unused       ->
+|   Code    |             Port              |       Padding     |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-                             Unused                             |
+\                                                               \
+/                             Context                           /
+\                                                               \
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ~~~
 
 | Field | Bits | Description | RFC |
 | :---- | :--: | :---------: | --: |
+| See HHS | 26 | Valid under 4 or 5. | 9 |
 | Type | 6 | Class of message. | N/A |
 | Code | 6 | Details of class. | N/A|
 | Port | 16 | Identifies the fragment stream. | N/A |
-
-### See HHS
-See RFC 9.
+| Context | 320 | The header of the offending CP datagram. | N/A |
 
 ### Type
 A number representing the class of the message.
@@ -109,8 +104,10 @@ A number giving more detail into the class of the message.
 ### Port
 The port that the CNMP packet should be forwarded to. This forwarding is done inside the computer.
 
-### Unused
+### Context
 This may be used to provide extra context. Not required, but the amount of space used here should be kept small; overwise, another protocol should be considered for use.
+
+If CNMP is used to report an error, this should be filled with 
 
 # Reference
 
