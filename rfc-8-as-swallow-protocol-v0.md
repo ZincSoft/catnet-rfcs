@@ -27,10 +27,6 @@ to help them get actuated and connected.
 As stated in the title of this RFC, this AS Swallow Protocol is only to be used on local networks. As such,
 it shouldn't be used in areas that intradomain routing might take place; there is another protocol for that.
 
-The reason why this isn't allowed is because ASP uses multicast (via MUDS, RFC 2) which is a bad idea/just plain
-won't work on the wider, public internet. There are also other reasons, such as the initial peer discovery
-problem, but coming up with those is an excersize left to the reader :)
-
 ## Operation
 Below are the steps for a computer to become a peer to others in an autonomous system running Catnet.
 Assume Bob wants to become a peer.
