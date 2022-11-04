@@ -70,7 +70,7 @@ As mentioned earlier/above, UTP is the only transport protocol (capable of suppo
 that sits directly on CP. This would be a problem since UTP provides no data reliability if it was not for the
 intended extensibility of UTP. Remember that UTP follows the header hierarchy system (HHS, 9).
 
-# Reference
+# References
 
 1. Catnet RFC 5
 2. Catnet RFC 9
