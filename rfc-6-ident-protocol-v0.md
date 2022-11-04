@@ -23,7 +23,7 @@ The following is a simple datagram showing the makeup of the IDENT protocol.
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                      See HHS                      |  Padding  |
+|                      See HHS                      |   Step    |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |           TRAMP ID            |      Interface Bandwidth      |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -35,6 +35,7 @@ The following is a simple datagram showing the makeup of the IDENT protocol.
 
 | Field | Bits | Description | RFC |
 | :---- | :--: | :---------: | --: |
+| Step | 6 | A number denoting which step the originating exhange is in. | N/A |
 | TRAMP ID | 16 | TRAMP ID for acknolegment packet. May be all 0s for no reply. | RFC 7 |
 | Interface Bandwidth | 16 | The sender's interface bandwidth for weight calculations. | N/A |
 | Reserved | 64 | It's a free for all!. | N/A |
@@ -44,6 +45,11 @@ See RFC 9.
 
 #### NOTE:
 IDENT can over be carried over ATP.
+
+### Step
+A number denoting which step the originating exchange is in. This is especially handy for protocols
+that require a handshake, think ATP; each step in the handshake gets it's own numeric idenitifier
+that is pushed into this spot.
 
 ### TRAMP ID
 Because IDENT is a TRAMP compatable protocol, a TRAMP ID needs to be sent so an appropriate
