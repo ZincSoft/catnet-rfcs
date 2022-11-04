@@ -20,6 +20,9 @@ papers), which make ATP A) faster, B) less-conversational, and C) simpler.
 UTP is CP's version of UDP. To most applications reaping UTP, it is functionally indistinguishable from UDP, as
 UTP really offers no improvements on UDP. UDP is simple as it is, and bare bones.
 
+UTP also forms as the base for other datagram transport protocols. Because it's so simple, there seems to be no
+transport protocol that cannot be build on it, furthering DRY in Catnet.
+
 ## DTP
 DTP is kind-of a special case; it's used where quick, simple, stateless transfer is needed (such as what UTP
 provides), but where error checking is also needed. It follows ATPs algorithm for error checking. This is mainly
