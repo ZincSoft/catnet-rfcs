@@ -52,7 +52,7 @@ The following is a simple datagram showing the makeup of the TRAMP protocol.
 See RFC 9.
 
 #### Note:
-TRAMP can only be carried over UTP or ATP.
+TRAMP can only be carried over DTP.
 
 ### Class
 The class of TRAMP packet, also known as what the TRAMP packet is trying to communicate.

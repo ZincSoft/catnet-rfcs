@@ -44,7 +44,7 @@ The following is a simple datagram showing the makeup of the IDENT protocol.
 See RFC 9.
 
 #### NOTE:
-IDENT can over be carried over ATP.
+IDENT can over be carried over DTP.
 
 ### Step
 A number denoting which step the originating exchange is in. This is especially handy for protocols
