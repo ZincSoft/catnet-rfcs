@@ -13,7 +13,7 @@ A node that forwards CPv0 packets not explicitly addressed to itself.
 ### Host
 Any node that is not a router.
 
-### Upper layer 
+### Upper layer
 A protocol layer immediately above CPv0. Examples are transport protocols such as ATP (Advanced Transmission Protocol)
 and DTP (Datagram Transmission Protocol), and control protocols such as WUPS (Weird Underlying-transmission Peril System).
 
@@ -22,7 +22,7 @@ A communication facility or medium over which nodes can communicate at the link 
 CPv0. Examples are Ethernets (simple or bridged); PPP links; X.25, Frame Relay, or ATM networks; and Catnet-layer or
 higher-layer "tunnels", such as tunnels over CPv0 itself.
 
-### Neighbors 
+### Neighbors
 Nodes attached to the same link.
 
 ### Interface
@@ -45,7 +45,7 @@ A header located beneath that of the overarching protocol of the datagram. This 
 belongs to an application/transport layer protocol.
 
 ### Alias Routing
-A routing technique that improve opon onion routing in terms of speed and security (since we are not bound by the
+A routing technique that improves upon onion routing in terms of speed and security (since we are not bound by the
 restrictions of the Internet Protocol). Alias routing takes two forms.
 
 #### Mono Aliasing
