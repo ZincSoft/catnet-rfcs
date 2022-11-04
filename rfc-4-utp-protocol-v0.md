@@ -50,6 +50,9 @@ The following is a simple diagram showing the makeup of the UTP protocol.
 ### See HHS
 See RFC 9.
 
+#### Note:
+UTP can only be carried over CP.
+
 ### Source Port
 The port that this packet was sent from.
 
@@ -66,12 +69,6 @@ The length of everything else, including the complimentary headers.
 As mentioned earlier/above, UTP is the only transport protocol (capable of supporting an application protocol)
 that sits directly on CP. This would be a problem since UTP provides no data reliability if it was not for the
 intended extensibility of UTP. Remember that UTP follows the header hierarchy system (HHS, 9).
-
-Each UTP complimentary header is defined in its own RFC. Below is a list.
-
-| Name | RFC |
-| :--- | --: |
-| ATP  | 5   |
 
 # Reference
 

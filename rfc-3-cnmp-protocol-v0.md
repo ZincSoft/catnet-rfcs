@@ -103,7 +103,7 @@ The following is a simple diagram showing the makeup of the CNMP protocol.
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 |   Code    |             Port              |       Unused       ->
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-                             Unused                             |
+ ->                          Unused                             |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ~~~
 
@@ -115,6 +115,9 @@ The following is a simple diagram showing the makeup of the CNMP protocol.
 
 ### See HHS
 See RFC 9.
+
+#### Note:
+CNMP can only be carried over UTP or ATP.
 
 ### Type
 A number representing the class of the message.
