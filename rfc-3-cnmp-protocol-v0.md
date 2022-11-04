@@ -11,6 +11,8 @@ This protocol is used for denoting errors (such as if a host could not be reache
 unavailable) and sending/broadcasting information and requests. Such requests may be an echo request (a
 ping/request) or a router broadcast (information).
 
+It is meant to only serve the network layer.
+
 ## Terminology
 
 ### Error
@@ -33,34 +35,6 @@ it is described as being on the network layer.
 
 CNMP is very closely tied to the CP protocol (RFC 1).
 
-## Interface
-Here are *some* examples concerning the two prominent use cases for this protocol.
-
-### Error Denoting
-
-1. Destination unreachable
-2. ATP packet resend request
-
-### Solicited Information Request
-
-1. ATP packet resend request
-2. ATP packet faulty token
-
-### Unsolicited Information Request
-
-1. Echo (ping)
-2. Router solicitation
-
-### Solicited Information Send
-
-1. Echo Reply
-2. Alias relations (incoming)
-
-### Unsolicited Information Send
-
-1. Alias relations (incoming)
-2. Echo request (ping request)
-
 # Overview
 
 ## Relation to other RFCs
@@ -73,12 +47,6 @@ RFC specifies what code is used to identify it and what extra data should be inc
 
 In short, protocols use CNMP to send back elementary information that is simple enough it does not need its own
 protocol. It is also used to report errors about the network and failures concerning other protocols.
-
-Below is a list of all the RFCs that use CNMP.
-
-| Name | RFC |
-| :--- | --: |
-| APRR | 6   |
 
 ## Reliability
 
@@ -117,7 +85,7 @@ The following is a simple diagram showing the makeup of the CNMP protocol.
 See RFC 9.
 
 #### Note:
-CNMP can only be carried over UTP or ATP.
+CNMP can only be carried over DPT.
 
 ### Type
 A number representing the class of the message.
